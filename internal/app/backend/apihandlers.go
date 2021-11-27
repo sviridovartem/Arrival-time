@@ -57,10 +57,10 @@ func (api *APIHandlers) lunarArrivalTimeHandler(res http.ResponseWriter, req *ht
 		return
 	}
 
-	lunarArrivalTime, err := api.core.GetArrivalTimeManager().GetLunarArrivalTime(string(*body))
-	if err != nil {
-		log.Error(err)
-		res.Write([]byte(err.Error()))
+	lunarArrivalTime, requestError := api.core.GetArrivalTimeManager().GetLunarArrivalTime(string(*body))
+	if requestError != nil {
+		log.Error(requestError)
+		res.Write([]byte(BuildResponse(requestError.Code, requestError.Error.Error())))
 		return
 	}
 

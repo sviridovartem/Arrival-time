@@ -4,8 +4,7 @@
 *.dll
 *.so
 *.dylib
-backend-core
-
+cmd/backend-core/__debug_bin
 # Test binary, built with `go test -c`
 *.test
 
@@ -14,7 +13,7 @@ backend-core
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-.vscode/settings.json
+.vscode/
 go.mod
 go.sum
 .idea/

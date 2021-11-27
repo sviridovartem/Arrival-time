@@ -54,20 +54,29 @@ const KeyFileDefault = "DeviceKey.key"
 // KeyFileEnvVar name of environment key file variable
 const KeyFileEnvVar = "KEY_FILE"
 
-// The default value is only needed when SSL/TLS certificate is not valid on server.
-// In production InsecureSkipVerify should be set to false.
+// TimeInputLayoutName name of environment variable of Time Input
+const TimeInputLayoutName = "time_input_layout_name"
 
-// InsecureSkipVerifyName name of environment variable of Insecure Skip Verify
-const InsecureSkipVerifyName = "insecure_skip_verify_name"
+// TimeInputLayoutUsage input value
+const TimeInputLayoutUsage = "The default format of date input"
 
-// InsecureSkipVerifyUsage input value
-const InsecureSkipVerifyUsage = "The default value is only needed when SSL/TLS certificate is not valid on server"
+// TimeInputLayoutDefault default value for Time Input
+const TimeInputLayoutDefault = "2006-01-02 15:04:05 -0700"
 
-// InsecureSkipVerifyDefault default value for Insecure Skip Verify
-const InsecureSkipVerifyDefault = "true"
+// TimeInputLayoutEnvVar name of environment Time Input variable
+const TimeInputLayoutEnvVar = "TIME_INPUT_LAYOUT"
 
-// InsecureSkipVerifyEnvVar name of environment Insecure Skip Verify variable
-const InsecureSkipVerifyEnvVar = "INSECURE_SKIP_VERIFY"
+// DeliverTimeName name of environment variable of Time Deliver from earth to moon
+const DeliverTimeName = "deliver_time_name"
+
+// DeliverTimeUsage input value
+const DeliverTimeUsage = "The default value of moon deliver time"
+
+// DeliverTimeDefault default value for DeliverTime
+const DeliverTimeDefault = 4
+
+// DeliverTimeEnvVar name of environment Deliver Time variable
+const DeliverTimeEnvVar = "DELIVER_TIME_LAYOUT"
 
 // Error codes section - begin
 
@@ -83,14 +92,20 @@ const ErrorReadRequestBody = 1000
 // ErrorReadRequestBodyMsg error message for ErrorReadRequestBody error code
 const ErrorReadRequestBodyMsg = "Can't read request body"
 
+// InvalidFormatTime is error code that returns to a client when can't parse input time
+const ErrorInvalidFormatTimeBody = 1001
+
+// ErrorInvalidFormatTimeMsg error message for ErrorInvalidFormatTimeBody error code
+const ErrorInvalidFormatTimeMsg = "invalid input time %v"
+
 // ErrorInvalidRequestFormat indicate validation errors
-const ErrorInvalidRequestFormat = 1003
+const ErrorInvalidRequestFormat = 1002
 
 // ErrorInvalidRequestFormatMsg message for ErrorInvalidRequestFormat
 const ErrorInvalidRequestFormatMsg = "invalid request format"
 
 // ErrorUnknown unknown error code
-const ErrorUnknown = 1004
+const ErrorUnknown = 1003
 
 // ErrorUnknownMsg unknown error message
 const ErrorUnknownMsg = "unknown error occurs [%v]"
