@@ -111,3 +111,15 @@ const ErrorUnknown = 1003
 const ErrorUnknownMsg = "unknown error occurs [%v]"
 
 // Error codes section - end
+
+// Get lunar time section - begin
+
+const LunarSecond = 0.9843529666671
+const LunarConstant = 14159025.0
+const SecondInMinutes = 60.0
+const SecondInHours = 3600.0
+const SecondInDay = 86400.0
+const SecondInMonth = 2592000.0
+const SecondInYear = 31104000.0
+
+// Get lunar time section - end
