@@ -107,12 +107,13 @@ func GetLunarTime(inputTime time.Time) string {
 	} else {
 		return fmt.Sprint(n, lunarYear, "-", lunarDayResult, "-", lunarCycleResult, " V ", lunarHoursResult, ":", lunarMinutesResult, ":", lunarSecondsResult)
 	}
-
 }
 
 // TwoDigitRepresentation returns string value of two character
 func TwoDigitRepresentation(n int) string {
-	if n < 10 {
+	if n < 0 {
+		return "-"
+	} else if n < 10 {
 		return fmt.Sprintf("0%d", n)
 	} else {
 		return fmt.Sprint(n)
